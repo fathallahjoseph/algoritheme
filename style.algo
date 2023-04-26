@@ -21,4 +21,3 @@ UNTIL (para[c]=".")
   write (" le nombre de mot est ",b)
    write (" le nombre de voyelle est ",a)
 END
-s
