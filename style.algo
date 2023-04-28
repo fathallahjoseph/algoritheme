@@ -1,23 +1,25 @@
 ALGORITHM  check-point
 VAR
- a,b,c:=INTEGER ;
+ a,b,c,i:=INTEGER ;
   para:=STRING[] ;
 BEGIN
  a=0;
   b=1;
    c=0;
+   i:=0;
     Write("type the sentence")
      Read(para)
 REPEAT
- IF (para[b]=" ") THEN
+ IF (para[i]=" ") THEN
   b:=b+1 ;
    END_IF
-    IF (para[b] in ["a","e","u","i","o","y"]) THEN
- a:= a +1 ;
+    IF (para[i] in ["a","e","u","i","o","y"]) THEN
+ a:= a +1;
   END_IF
    c := c+1 ;
-UNTIL (para[c]=".")
- write( "le nombre de caractere est ",c+1 )
-  write (" le nombre de mot est ",b)
-   write (" le nombre de voyelle est ",a)
+   i=i+1
+UNTIL (para[i]=".")
+ write( "le nombre de caractere est ",c)
+  write(" le nombre de mot est ",b)
+   write(" le nombre de voyelle est ",a)
 END
